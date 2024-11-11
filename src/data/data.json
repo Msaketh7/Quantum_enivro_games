@@ -1,0 +1,154 @@
+{
+  "Header": {
+    "title": "QUANTUM ENVIRO GAMES",
+    "paragraph": "Crafting Unique Worlds. One Game at a Time."
+  },
+  "About": {
+    "paragraph1": "Quantum Enviro Games is an independent game development studio committed to crafting unique, immersive games with a focus on quality over quantity.We approach game development with creativity, precision, and a strong attention to detail. As a growing indie studio, we pride ourselves on taking the time to build rich, interactive worlds—one game at a time." ,
+    "paragraph2": "Quantum Enviro Games is laying the foundation to expand and bring talented developers, artists, and designers on board in the future. Our mission is to create memorable gaming experiences that captivate players through engaging narratives, stunning visuals, and thoughtful gameplay mechanics." ,
+    "paragraph3": "We believe in the power of small, dedicated teams to push the boundaries of game design, and we look forward to growing our team while maintaining our independent spirit." ,
+    "Why": [
+      "Creative Freedom: We encourage creative expression and innovative thinking. Every team member has the opportunity to contribute meaningfully to the project.",
+      "Collaborative Environment: As we grow, we're committed to maintaining a collaborative, inclusive work culture where every voice is valued.",
+      "Work on Exciting Projects: Be part of developing indie games that focus on quality, rich storytelling, and immersive gameplay.",
+      "Remote-Friendly: We believe in flexibility. We plan to offer opportunities for remote work so that you can be part of the team from anywhere in the world."
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "img":"img/Full game development.png",
+      "name": "Full Game Development",
+      "text": "We handle the entire game development process, from concept and design to implementation. We focus on creating one game at a time to ensure each project receives the attention and creativity it deserves. Whether it's a story-driven adventure or a fast-paced action game, our goal is to deliver high-quality gameplay experiences that leave a lasting impact on players."
+    },
+    {
+      "img":"img/3D Environment.png",
+      "name": "3D Environment & Prop Design",
+      "text": "With expertise in 3D modeling and world-building, we create detailed and dynamic environments that bring game worlds to life. From natural landscapes to futuristic cityscapes, we craft environments that immerse players in the game's universe. Our prop design services also add the fine details that enrich any game setting"
+    },
+    {
+      "img":"img/Worldbuilding.png",
+      "name": "World-Building & Story Development",
+      "text": "We believe in the power of storytelling to drive games. Our team develops rich narratives and intricate worlds, ensuring that gameplay is supported by deep lore and compelling characters. From concept to execution, we help create worlds that players want to explore."
+    },
+    {
+      "img":"img/Artistic collaboration and consulting.png",
+      "name": "Artistic Collaboration & Consulting",
+      "text": "Quantum Enviro Games also offers consulting services for studios and developers seeking help with environment design, level design, and asset creation. We collaborate with other developers and artists to bring their vision to life, offering guidance and support throughout the creative process."
+    },
+    {
+      "img":"img/Future collaboration.png",
+      "name": "Future Collaboration",
+      "text": "As we grow, we plan to expand our services to include a larger array of game development needs, from animation to sound design, by bringing on talented individuals who share our vision for creating immersive, high-quality games."
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team1.jpeg"
+    }
+  ],
+  "Contact": {
+    "address": "12515 Hardy st Overland Park KS , 66213",
+    "phone": "+1 309-420-3575",
+    "email": "admin@quantumenvirogames.com",
+    "help": "qhelp@quantumenvirogames.com",
+    "linkedin": "https://www.linkedin.com/company/quantum-enviro-games/?viewAsMember=true"
+  },
+  "Play": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    }
+  ],
+
+  "Careers2": [
+    {
+      "name": "Developer",
+      "description": "Focus on coding and technical implementation of games. Engage in software development, manage the backend systems, maintain databases, and ensure the technical framework is robust and scalable. Ideal candidates are proficient in multiple programming languages and possess a strong understanding of game and software development methodologies."
+    },
+    {
+      "name": "Designer",
+      "description": "Focus on the visual aesthetics and user experiences of projects. Create engaging designs for web and game interfaces, ensure user-friendly navigation, and develop visual concepts that match project goals. Candidates should have a keen eye for design, proficiency in design software, and an understanding of user experience principles."
+    },
+    {
+      "name": "Operations",
+      "description": "Focus on internal team dynamics and ensuring efficient project management. Manage HR-related tasks, coordinate team activities, oversee project timelines, and ensure a positive work environment. This role requires excellent organization skills, experience in project management, and the ability to foster a collaborative team atmosphere."
+    },
+    {
+      "name": "Game Art",
+      "description": "Focus on the creation and conceptualization of game elements. Design game mechanics, develop storyboards, create characters, and levels to bring game concepts to life. This includes roles like 3D Artists, Narrative Designers, Animators, and more."
+    },
+    {
+      "name": "Audio",
+      "description": "Focus on the creation and production of audio elements. Design and produce sound effects, record and edit voiceovers, and create music to enhance project experiences. Includes roles like sound designers, voice actors, and audio engineers."
+    },
+    {
+      "name": "Media",
+      "description": "Focus on content creation for social media. Plan, record, and edit video content, manage media production for various projects, and ensure high-quality media output."
+    }
+  ]
+}
+
+  

@@ -1,0 +1,11 @@
+Developer: Focus on coding and technical implementation of games. Engage in software development, manage the backend systems maintain databases, and ensure the technical framework is robust and scalable. Ideal candidates are proficient in multiple programming languages and possess a strong understanding of game and software development methodologies. 
+
+Designer: Focus on the visual aesthetics and user experiences of projects. Create engaging designs for web and game interfaces, ensure user – friendly navigation, and develop visual concepts that match project goals. Candidates should have keen eye for design, proficiency in design software, and an understanding of user experience principles. 
+
+Operations: Focus on internal team dynamics and ensuring efficient project management. Manage HR-related tasks, coordinate team activities, oversee project timelines, and ensure a positive work environment. This role requires excellent organization skills, experience in project management, and the ability to foster a collaborative team atmosphere.
+
+Game Art: Focus on the creation and conceptualization of game elements. Design game mechanics, develop storyboards, create characters and levels to bring game concepts to life. Candidates should possess creative storytelling abilities, experience in game design software, and an understanding of game mechanics. This category includes specialized roles such as 3D Artists, Narrative designers, 2D artists, Storyboard artists, Animators, game designers, VFR artists, Graphic artists. Layout artists, Strategy designers, UI/UX Artists.
+
+Audio: Focus on the creation and production of audio elements for various projects, Design and produce sound effects, record and edit voiceovers, and create musing to enhance project experiences. Candidates should have experience in audio production, sound design, and voice acting. This category includes roles such as sound designers, voice actors, and audio engineers.
+
+Media: Focus on content creation for the social media platform. Plan, record, and edit video content for the social media, manage media production for various projects and ensure high quality media output. Candidates should have experience in video editing software, content creation, and media production.
