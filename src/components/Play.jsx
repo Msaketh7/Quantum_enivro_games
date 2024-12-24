@@ -3,15 +3,15 @@ import React, { useState, useEffect, useRef } from "react";
 export const Play = () => {
   // Image slideshow state
   const images = [
-    "/img/play/play1.jpg",
-    "/img/play/play2.jpg",
-    "/img/play/play3.jpg",
-    "/img/play/play4.jpg",
-    "/img/play/play5.jpg",
-    "/img/play/play6.jpg",
-    "/img/play/play7.jpg",
-    "/img/play/play8.jpg",
-    "/img/play/play9.jpg",
+    "img/Play/play1.jpg",
+    "img/Play/play2.jpg",
+    "img/Play/play3.jpg",
+    "img/Play/play4.jpg",
+    "img/Play/play5.jpg",
+    "img/Play/play6.jpg",
+    "img/Play/play7.jpg",
+    "img/Play/play8.jpg",
+    "img/Play/play9.jpg",
   ];
   const [currentImage, setCurrentImage] = useState(0);
   const autoSlideInterval = useRef(null);
@@ -63,7 +63,7 @@ export const Play = () => {
       <div className="container">
         <div className="section-title">
           <a
-            href="/path/to/your/play-file.zip"
+            href="https://quantumenvirogames-bucket1.s3.us-east-1.amazonaws.com/ESCAPE+DRAGON.zip"
             download
             className="download-button"
           >

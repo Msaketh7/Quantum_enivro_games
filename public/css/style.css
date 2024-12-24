@@ -5,8 +5,8 @@ html {
   -webkit-font-smoothing: antialiased !important;
   color: #777;
   font-weight: 400;
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
 }
 h2,
 h3,
@@ -58,8 +58,7 @@ ol {
 ul,
 ol {
   padding: 0;
-  webkit-padding: 0;
-  moz-padding: 0;
+  margin: 0;
 }
 hr {
   height: 2px;
@@ -70,12 +69,99 @@ hr {
   margin-bottom: 20px;
   border: 0;
 }
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  p.intro {
+    margin: 10px 0 0;
+    line-height: 22px;
+  }
+
+  hr {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  p.intro {
+    margin: 8px 0 0;
+    line-height: 20px;
+  }
+
+  hr {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+}
+
 /* Navigation */
 #menu {
   padding: 15px;
   transition: all 0.8s;
 }
-#menu img{
+#menu img {
   border-radius: 50%;
 }
 #menu.navbar-default {
@@ -143,6 +229,8 @@ hr {
 .navbar-default .navbar-toggle:hover > .icon-bar {
   background-color: #7b6446;
 }
+
+/* Section Titles */
 .section-title {
   margin-bottom: 40px;
 }
@@ -165,6 +253,8 @@ hr {
 .section-title p {
   font-size: 18px;
 }
+
+/* Buttons */
 .btn-custom {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -206,12 +296,82 @@ a:focus,
   outline: none;
   outline-offset: none;
 }
+
+/* Responsive for Tablets */
+@media screen and (max-width: 768px),(max-width: 850px) {
+  #menu {
+    padding: 10px;
+  }
+  #menu.navbar-default .navbar-nav > li > a {
+    font-size: 14px;
+    margin: 8px 10px 0;
+  }
+  #menu a.navbar-brand {
+    font-size: 20px;
+  }
+  .section-title h2 {
+    font-size: 28px;
+  }
+  .section-title p {
+    font-size: 16px;
+  }
+  .btn-custom {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+  #menu .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #menu {
+    padding: 5px;
+  }
+  #menu.navbar-default .navbar-nav > li > a {
+    font-size: 12px;
+    margin: 5px 5px 0;
+  }
+  #menu a.navbar-brand {
+    font-size: 18px;
+  }
+  .section-title h2 {
+    font-size: 24px;
+  }
+  .section-title p {
+    font-size: 14px;
+  }
+  .btn-custom {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+  .navbar-toggle {
+    margin: 5px;
+  }
+   .navbar-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .navbar-brand.page-scroll {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+} 
+
 /* Header Section */
 .intro {
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url(../img/intro-bg.jpg) center no-repeat;
+  align-content: center;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -224,7 +384,7 @@ a:focus,
 .intro h1 {
   font-family: "Raleway", sans-serif;
   color: #fff;
-  font-size: 82px;
+  font-size: 80px;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
@@ -247,10 +407,50 @@ header .intro-text {
   padding-bottom: 200px;
   text-align: center;
 }
+
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  .intro h1 {
+    font-size: 50px;
+  }
+  .intro h1 span {
+    font-size: 50px;
+  }
+  .intro p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+  header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  .intro h1 {
+    font-size: 36px;
+  }
+  .intro h1 span {
+    font-size: 36px;
+  }
+  .intro p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  header .intro-text {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+}
+
 /* Features Section */
 #features {
   background: #f6f6f6;
 }
+
 #features i.fa {
   font-size: 38px;
   margin-bottom: 20px;
@@ -262,6 +462,26 @@ header .intro-text {
   border-radius: 50%;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  #features i.fa {
+    font-size: 30px; /* Slightly smaller icon */
+    width: 80px;     /* Reduced circle size */
+    height: 80px;
+    padding: 25px 0; /* Adjust padding to maintain proportions */
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #features i.fa {
+    font-size: 24px; /* Further reduced icon size for small screens */
+    width: 60px;     /* Smaller circle */
+    height: 60px;
+    padding: 20px 0; /* Adjust padding for smaller circles */
+  }
 }
 
 /* About Section */
@@ -347,25 +567,82 @@ header .intro-text {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #about .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-text {
+    width: 90%; /* Full width for better readability */
+    padding: 20px;
+  }
+
+  #about h2.about-title, #about h3.about-title {
+    font-size: 24px; /* Smaller font size for titles */
+  }
+
+  #about p.about-paragraph {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  #about ul li.about-list-item {
+    font-size: 14px; /* Adjust font size for list items */
+    padding-left: 15px; /* Adjust padding for smaller screens */
+  }
+
+  #about ul li.about-list-item::before {
+    font-size: 16px; /* Adjust bullet size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about {
+    padding: 50px 0; /* Reduce padding for smaller devices */
+  }
+
+  .about-text {
+    padding: 15px; /* Adjust padding for compact view */
+  }
+
+  #about h2.about-title, #about h3.about-title {
+    font-size: 20px; /* Further reduce font size for smaller screens */
+  }
+
+  #about p.about-paragraph {
+    font-size: 12px; /* Compact font size for small screens */
+  }
+
+  #about ul li.about-list-item {
+    font-size: 12px; /* Compact font size for list items */
+    padding-left: 10px; /* Further adjust padding */
+  }
+  #about .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 20px;
+  }
+}
+
 /* Services Section */
-#services .row{
+#services .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 #services {
   padding: 100px 0;
-  /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%); */
   background-image: url(../img/Services\ 2nd\ Page.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
 }
-#services .logo-img{
+#services .logo-img {
   width: 150px;
 }
-
 #services .service-desc {
   margin: 10px 10px 20px;
 }
@@ -401,13 +678,15 @@ header .intro-text {
   color: rgba(255, 255, 255, 0.75);
   text-align: center;
 }
-#services .service-desc p{
-  text-align: justify;
+#services .service-desc p {
+  line-height: 1.5; /* Adjust the spacing between lines */
+  word-spacing: normal;
+  color: #f0f0f0;
 }
-#services .queries p{
+#services .queries p {
   justify-content: center;
 }
-#services .queries a{
+#services .queries a {
   color: #f6f6f6;
   text-decoration-line: underline;
 }
@@ -417,7 +696,6 @@ header .intro-text {
 #services .row > div {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 #services .row > div:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -433,10 +711,146 @@ header .intro-text {
   border-radius: 5px;
   color: #fff;
   text-align: center;
-  
 }
-/*play section*/
-/* Center the download button */
+/* Queries Section */
+#services .queries {
+  margin-top: 20px;
+  text-align: center;
+}
+#services .queries p {
+  font-size: 16px;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+#services .queries a {
+  color: #f6f6f6;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+#services .queries a:hover {
+  color: #5ca9fb;
+}
+#services .row > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 250px; /* Adjust as needed */
+}
+
+#services .row > div .service-desc {
+  flex-grow: 1; /* Ensures all cards expand evenly */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  #services .queries p {
+    font-size: 14px; /* Adjust font size for tablet */
+  }
+
+  #services .queries a {
+    font-size: 14px; /* Reduce link font size for better fit */
+  }
+
+  #services .queries {
+    margin-top: 15px; /* Adjust spacing for smaller screens */
+  }
+  #services .row > div {
+    min-height: 200px;
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #services .queries p {
+    font-size: 12px; /* Further reduce font size for mobile */
+    margin-bottom: 8px;
+  }
+
+  #services .queries a {
+    font-size: 12px; /* Adjust link size */
+  }
+
+  #services .queries {
+    margin-top: 10px; /* Further adjust spacing for mobile */
+    padding: 0 10px; /* Add padding for mobile */
+  }
+  #services .row > div {
+    min-height: 150px;
+  }
+}
+
+
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  #services {
+    padding: 60px 10px; /* Reduce padding for smaller screens */
+  }
+
+  #services h2 {
+    font-size: 24px; /* Adjust title size */
+  }
+
+  #services i.fa {
+    font-size: 36px; /* Smaller icon size */
+    width: 100px;
+    height: 100px;
+    padding: 30px 0;
+  }
+
+  #services .logo-img {
+    width: 120px; /* Resize logo */
+  }
+
+  #services .row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #services {
+    padding: 40px 10px; /* Further reduce padding */
+  }
+
+  #services h2 {
+    font-size: 20px; /* Further adjust title size */
+  }
+
+  #services i.fa {
+    font-size: 28px; /* Even smaller icon size */
+    width: 80px;
+    height: 80px;
+    padding: 20px 0;
+  }
+
+  #services .logo-img {
+    width: 100px; /* Resize logo for mobile */
+  }
+
+  #services .row > div {
+    margin-bottom: 20px; /* Add spacing between stacked items */
+  }
+
+  #services .service-desc {
+    padding: 10px; /* Adjust padding */
+    margin: 0 5px 20px;
+  }
+
+  #services .section-title p {
+    font-size: 14px; /* Adjust font size for descriptions */
+  }
+}
+/* Play Section */
 #play {
   background-image: url(../img/play.png);
   background-size: cover;
@@ -445,58 +859,55 @@ header .intro-text {
   color: #fff;
   padding: 100px 0;
   margin: 0 auto;
+  text-align: center; /* Center the content */
 }
 
-
-#play p{
-  text-align: center;
+#play p {
   font-size: 24px;
   color: #fff;
+  margin-bottom: 20px;
 }
+
 .download-button {
   display: inline-block;
   margin: 20px 0;
   padding: 10px 20px;
-  font-size: 40px;
-  color:#fff;
-  background-color:#7c645c;
+  font-size: 24px; /* Adjust font size for buttons */
+  color: #fff;
+  background-color: #7c645c;
   border-radius: 50px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .download-button:hover {
-  background-color: #7c6c58; /* Darker blue on hover */
-  transform: scale(1.05); /* Slightly increase size on hover */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-  color: #fff;
+  background-color: #7c6c58;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #6b503d;
 }
-
 
 /* Slideshow container */
 .slideshow {
   position: relative;
-  max-width: 50%;
+  max-width: 70%; /* Adjust max-width for tablets */
   margin: auto;
   overflow: hidden;
 }
 
-/* Slide image */
 .slide-image {
-  width: 70%;
+  width: 100%; /* Ensure image fits in container */
   height: auto;
   border-radius: 10px;
 }
 
-/* Caption */
 .caption {
   position: absolute;
-  bottom: 1px;
+  bottom: 10px; /* Adjust bottom position */
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 16px;
+  font-size: 14px; /* Adjust font size */
 }
 
 /* Navigation buttons */
@@ -526,7 +937,56 @@ header .intro-text {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* careersmain Section */
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  #play {
+    padding: 80px 0; /* Adjust padding */
+  }
+
+  #play p {
+    font-size: 20px; /* Reduce font size for tablets */
+  }
+
+  .download-button {
+    font-size: 28px; /* Adjust button font size */
+    padding: 12px 24px; /* Adjust button padding */
+  }
+
+  .slideshow {
+    max-width: 90%; /* Increase max-width for tablets */
+  }
+
+  .caption {
+    font-size: 12px; /* Reduce caption font size */
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #play {
+    padding: 60px 0; /* Further adjust padding */
+  }
+
+  #play p {
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+
+  .download-button {
+    font-size: 24px; /* Reduce button font size */
+    padding: 10px 20px; /* Adjust button padding */
+  }
+
+  .slideshow {
+    max-width: 100%; /* Full-width for mobile */
+  }
+
+  .caption {
+    font-size: 12px; /* Reduce caption font size */
+    bottom: 5px; /* Adjust caption position */
+  }
+}
+
+/* Careers Main Section */
 #careers {
   padding: 300px 0;
   background-image: url(../img/Career.png);
@@ -534,6 +994,7 @@ header .intro-text {
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
+  text-align: center; /* Center the text */
 }
 
 #careers h2 {
@@ -549,9 +1010,10 @@ header .intro-text {
   font-size: 18px;
   line-height: 1.6;
   color: #f0f0f0;
+  margin: 0 auto; /* Center paragraph */
 }
 
-/*careers2 section*/
+/* Careers 2 Section */
 #careers2 {
   padding: 100px 0;
   background-image: url(../img/Career\ Second\ Page.png);
@@ -559,6 +1021,7 @@ header .intro-text {
   background-repeat: no-repeat;
   background-position: center;
   color: #ffffff;
+  text-align: center; /* Center the text */
 }
 
 .section-title h2 {
@@ -578,30 +1041,37 @@ header .intro-text {
 .careers2-item {
   margin-bottom: 50px;
   transition: transform 0.7s ease, box-shadow 0.5s ease;
-  
+  flex: 1; /* Ensures all items grow evenly */
+  display: flex;
+  justify-content: center;
+
 }
 
 .careers2-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-
 }
 
 .careers2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 300px; /* Set a uniform height */
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   text-align: center;
 }
-
 .careers2-desc h3 {
   font-size: 24px;
   margin-bottom: 10px;
   color: #523a28;
+  margin-bottom: 15px;
 }
 
-.careers2-desc p:hover{
+.careers2-desc p:hover {
   font-size: 16px;
   color: #fff;
 }
@@ -609,7 +1079,9 @@ header .intro-text {
 .careers2-desc p {
   font-size: 16px;
   color: #d0d0d0;
+  margin-top: 15px;
 }
+
 .queries p {
   margin-top: 40px;
   font-size: 30px;
@@ -625,9 +1097,94 @@ header .intro-text {
   text-decoration: underline;
 }
 
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  #careers {
+    padding: 150px 0; /* Reduce padding on tablets */
+  }
 
+  #careers h2 {
+    font-size: 32px; /* Reduce font size for tablets */
+  }
 
+  #careers p {
+    font-size: 16px; /* Adjust font size for tablets */
+    max-width: 80%; /* Limit paragraph width */
+    margin: 0 auto;
+  }
 
+  #careers2 {
+    padding: 80px 0; /* Adjust padding for tablets */
+  }
+
+  .section-title h2 {
+    font-size: 30px; /* Adjust section title font size */
+  }
+
+  .careers2-item {
+    margin-bottom: 30px; /* Reduce margin */
+  }
+
+  .careers2-desc h3 {
+    font-size: 20px; /* Adjust heading font size */
+  }
+
+  .careers2-desc p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .queries p {
+    font-size: 24px; /* Reduce font size for queries */
+  }
+  .careers2-content {
+    min-height: 250px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #careers {
+    padding: 100px 0; /* Further reduce padding */
+  }
+
+  #careers h2 {
+    font-size: 28px; /* Further reduce font size */
+  }
+
+  #careers p {
+    font-size: 14px; /* Adjust font size for mobile */
+    max-width: 90%; /* Limit paragraph width */
+    margin: 0 auto;
+  }
+
+  #careers2 {
+    padding: 60px 0; /* Further reduce padding */
+  }
+
+  .section-title h2 {
+    font-size: 26px; /* Adjust font size */
+  }
+
+  .careers2-item {
+    margin-bottom: 20px; /* Reduce bottom margin */
+  }
+
+  .careers2-desc h3 {
+    font-size: 18px; /* Adjust heading font size */
+  }
+
+  .careers2-desc p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .queries p {
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+  .careers2-content {
+    min-height: 200px; /* Further adjust height for mobile */
+    padding: 15px; /* Reduce padding for compact view */
+  }
+}
 
 /* Team Section */
 #team {
@@ -637,18 +1194,16 @@ header .intro-text {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
+  text-align: center; /* Centering text */
 }
 
 #team h2 {
   font-size: 40px;
   margin-bottom: 30px;
   text-decoration: none;
-  text-align: center;
   text-transform: uppercase;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
   color: #8d6429;
   letter-spacing: 2px;
-
 }
 
 #team .team {
@@ -678,12 +1233,57 @@ header .intro-text {
   text-align: center;
 }
 
-
 /* Hover Effects */
 #team .team:hover .team-img {
   transform: scale(1.1); /* Slightly enlarge the image */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-  /* border: 2px solid #454b51; Add a subtle blue border on hover */
+}
+
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  #team {
+    padding: 80px 0; /* Reduce padding on tablets */
+  }
+
+  #team h2 {
+    font-size: 30px; /* Adjust font size for tablets */
+  }
+
+  #team .team-img {
+    width: 200px; /* Reduce image size */
+  }
+
+  .team {
+    margin-bottom: 20px; /* Adjust margin for better spacing */
+  }
+
+  #team .team-img {
+    width: 200px; /* Adjust the image size */
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #team {
+    padding: 60px 0; /* Reduce padding further */
+  }
+
+  #team h2 {
+    font-size: 24px; /* Further reduce font size */
+  }
+
+  #team .team-img {
+    width: 150px; /* Further reduce image size */
+  }
+
+  .team {
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  #team .thumbnail {
+    display: block; /* Stack team images vertically */
+    margin: 0 auto; /* Center images on mobile */
+  }
 }
 
 /* Contact Section */
@@ -693,30 +1293,37 @@ header .intro-text {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color:#ffffff;
-}
-#contact h3{
   color: #ffffff;
-  text-decoration-line:underline;
+  text-align: center; /* Center text */
+}
+
+#contact h3 {
+  color: #ffffff;
+  text-decoration-line: underline;
   font-size: 25px;
 }
-#contact .contact-item a{
+
+#contact .contact-item a {
   color: #ffffff;
-  text-decoration-line:underline;
+  text-decoration-line: underline;
 }
+
 #contact .section-title {
   margin-bottom: 40px;
 }
+
 #contact .section-title p {
   font-size: 16px;
   color: #d3cbc4;
 }
+
 #contact h2 {
   color: #fff;
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
+
 #contact .section-title h2::after {
   position: absolute;
   content: "";
@@ -726,6 +1333,7 @@ header .intro-text {
   bottom: 0;
   left: 30px;
 }
+
 #contact h3 {
   color: #fff;
   margin-top: 80px;
@@ -733,28 +1341,34 @@ header .intro-text {
   padding-bottom: 20px;
   font-weight: 400;
 }
+
 #contact form {
   padding-top: 20px;
 }
+
 #contact .text-danger {
   color: #cc0033;
   text-align: left;
 }
+
 #contact .btn-custom {
   margin: 30px 0;
   background: transparent;
   border: 2px solid #fff;
 }
+
 #contact .btn-custom:hover {
   color: #1f386e;
   background: #fff;
 }
+
 label {
   font-size: 12px;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   float: left;
 }
+
 #contact .form-control {
   display: block;
   width: 100%;
@@ -772,45 +1386,56 @@ label {
   -o-transition: none;
   transition: none;
 }
+
 #contact .form-control:focus {
   border-color: #999;
   outline: 0;
   -webkit-box-shadow: transparent;
   box-shadow: transparent;
 }
+
 .form-control::-webkit-input-placeholder {
   color: #777;
 }
+
 .form-control:-moz-placeholder {
   color: #777;
 }
+
 .form-control::-moz-placeholder {
   color: #777;
 }
+
 .form-control:-ms-input-placeholder {
   color: #777;
 }
+
 #contact .contact-item {
   margin: 20px 0;
 }
+
 #contact .contact-item span {
   color: rgba(255, 255, 255, 1);
   margin-bottom: 10px;
   display: block;
 }
+
 #contact .contact-item i.fa {
   margin-right: 10px;
 }
+
 #contact .social {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 50px;
   margin-top: 50px;
   text-align: center;
 }
+
 #contact .social ul li {
   display: inline-block;
   margin: 0 20px;
 }
+
 #contact .social i.fa {
   font-size: 22px;
   width: 48px;
@@ -821,43 +1446,165 @@ label {
   border-radius: 50%;
   transition: all 0.3s;
 }
+
 #contact .social i.fa:hover {
   color: #608dfd;
   background: #fff;
 }
-/* Footer Section*/
+
+/* Responsive for Tablets */
+@media screen and (max-width: 768px) {
+  #contact {
+    padding: 80px 0; /* Reduce padding */
+  }
+
+  #contact h2 {
+    font-size: 30px; /* Adjust font size */
+  }
+
+  #contact .contact-item {
+    margin: 15px 0; /* Adjust margin */
+  }
+
+  #contact .section-title p {
+    font-size: 14px; /* Adjust paragraph size */
+  }
+
+  #contact h3 {
+    font-size: 20px; /* Adjust subheading font size */
+    margin-top: 60px;
+  }
+
+  #contact .form-control {
+    font-size: 14px; /* Adjust font size of inputs */
+  }
+
+  #contact .social ul li {
+    margin: 0 15px; /* Adjust social media icon spacing */
+  }
+
+  #contact .social i.fa {
+    font-size: 18px; /* Reduce icon size */
+    width: 40px;
+    height: 40px;
+    padding: 10px 0;
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 480px) {
+  #contact {
+    padding: 60px 0; /* Reduce padding further */
+  }
+
+  #contact h2 {
+    font-size: 24px; /* Further adjust heading font size */
+  }
+
+  #contact h3 {
+    font-size: 18px; /* Adjust subheading font size */
+  }
+
+  #contact .contact-item {
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  #contact .form-control {
+    font-size: 14px; /* Adjust input field font size */
+  }
+
+  #contact .social ul li {
+    margin: 0 10px; /* Adjust spacing for smaller screens */
+  }
+
+  #contact .social i.fa {
+    font-size: 16px; /* Smaller icons */
+    width: 36px;
+    height: 36px;
+    padding: 8px 0;
+  }
+}
+/* Footer Section */
 #footer {
   background: #f6f6f6;
   padding: 30px 0;
 }
+
 #footer p {
   color: #888;
   font-size: 14px;
+  text-align: center; /* Center text for smaller screens */
 }
+
 #footer a {
   color: #608dfd;
 }
+
 #footer a:hover {
   border-bottom: 2px solid #608dfd;
 }
 
-@media (max-width: 768px) {
-  #about img {
-    margin: 50px 0;
-  }
-}
-
+/* Navbar Responsiveness */
 .navbar-brand {
   display: flex;
   align-items: center;
 }
 
 .navbar-logo {
-  height: 50px; 
-  margin-right: 10px; 
+  height: 50px;
+  margin-right: 10px;
 }
 
 .navbar-text {
-  font-size: 16px; 
+  font-size: 16px;
 }
+
+/* Responsive for Tablets */
+@media (max-width: 768px) {
+  #footer p {
+    font-size: 12px; /* Adjust font size for tablets */
+    padding: 10px 0; /* Add padding for better spacing */
+  }
+
+  .navbar-brand {
+    justify-content: center; /* Center brand on smaller screens */
+  }
+
+  .navbar-text {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  #footer {
+    padding: 20px 0; /* Reduce padding for tablets */
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 480px) {
+  #footer p {
+    font-size: 12px; /* Further reduce font size on mobile */
+    text-align: center; /* Center text for smaller screens */
+    padding: 5px 0; /* Reduce padding */
+  }
+
+  .navbar-logo {
+    height: 40px; /* Adjust logo size for mobile */
+    margin-right: 8px;
+  }
+
+  .navbar-text {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  #footer {
+    padding: 15px 0; /* Further reduce padding for mobile */
+  }
+
+  /* Navbar adjustments for mobile */
+  .navbar-brand {
+    justify-content: center; /* Center the navbar items */
+    width: 100%; /* Make navbar brand take full width */
+  }
+}
+
 

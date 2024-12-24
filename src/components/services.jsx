@@ -26,7 +26,7 @@ export const Services = (props) => {
             : "loading"}
         </div>
         <div className="queries">
-          <p>Any further queries feel free to reach out at <a href="#" >qservices@quantumenvirogames.com</a> </p>
+          <p>Any further queries feel free to reach out at <a href="mailto: qservices@quantumenvirogames.com" >qservices@quantumenvirogames.com</a> </p>
         </div>
       </div>
     </div>

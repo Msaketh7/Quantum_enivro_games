@@ -124,7 +124,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
                 </span>{" "}
-                <a href="#">{props.data ? props.data.email : "loading"}</a>
+                <a href="mailto: admin@quantumenvirogames.com">{props.data ? props.data.email : "loading"}</a>
               </p>
             </div>
             <div className="contact-item">
@@ -132,7 +132,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-envelope-o"></i> Help
                 </span>{" "}
-                <a href="#">{props.data ? props.data.help : "loading"}</a>
+                <a href="mailto: qhelp@quantumenvirogames.com">{props.data ? props.data.help : "loading"}</a>
               </p>
             </div>
           </div>
@@ -146,7 +146,7 @@ export const Contact = (props) => {
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
+                    <a href={props.data ? props.data.instagram : "/"}>
                       <i className="fa fa-instagram"></i>
                     </a>
                   </li>

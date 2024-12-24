@@ -90,7 +90,8 @@
   ],
   "Team": [
     {
-      "img": "img/team1.jpeg"
+      "img": "img/team1.jpeg",
+      "role": "Founder & CEO"
     }
   ],
   "Contact": {
@@ -98,7 +99,8 @@
     "phone": "+1 309-420-3575",
     "email": "admin@quantumenvirogames.com",
     "help": "qhelp@quantumenvirogames.com",
-    "linkedin": "https://www.linkedin.com/company/quantum-enviro-games/?viewAsMember=true"
+    "linkedin": "https://www.linkedin.com/company/quantum-enviro-games/?viewAsMember=true",
+    "instagram": "https://www.instagram.com/quantumenvirogames/profilecard/?igsh=dzczcWpjMnVtYXhm"
   },
   "Play": [
     {
