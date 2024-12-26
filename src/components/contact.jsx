@@ -1,6 +1,7 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
 import React from "react";
+// import AWS from 'aws-sdk';
+import { saveContactMessage } from './dynamoDBService.jsx';
 
 const initialState = {
   name: "",
@@ -9,32 +10,80 @@ const initialState = {
 };
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+
+// Configure AWS SDK
+// AWS.config.update({
+//   region: 'us-east-1', // e.g., 'us-east-1'
+//   accessKeyId: 'admin@quantumenvirogames.com',
+//   secretAccessKey: 'Qu@ntumenviro9821',
+// });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
   const clearState = () => setState({ ...initialState });
-  
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, message);
+    setSubmitting(true);
+    setSubmitError(null);
     
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    try {
+      // Save to DynamoDB
+      await saveContactMessage({ name, email, message });
+      clearState();
+      alert('Message sent successfully!');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitError('Failed to send message. Please try again later.');
+    } finally {
+      setSubmitting(false);
+    }
   };
+    // console.log(name, email, message);
+  
+  //   // Create a new DynamoDB document
+  //   const docClient = new AWS.DynamoDB.DocumentClient();
+  //   const params = {
+  //     TableName: 'ContactFormSubmissions',
+  //     Item: {
+  //       id: new Date().toISOString(), // Unique ID for the submission
+  //       name: name,
+  //       email: email,
+  //       message: message,
+  //     },
+  //   };
+  
+  //   try {
+  //     await docClient.put(params).promise();
+  //     console.log("Data saved to DynamoDB");
+  //     clearState();
+  //   } catch (error) {
+  //     console.error("Error saving data to DynamoDB:", error);
+  //   }
+  // };
+  
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(name, email, message);
+    
+  //   {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
+    
+  //   emailjs
+  //     .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         clearState();
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
   return (
     <div>
       <div id="contact">
@@ -78,7 +127,7 @@ export const Contact = (props) => {
                         required
                         onChange={handleChange}
                       />
-                      <p className="help-block text-danger"></p>
+                      <p className="help-block text-danger"></p>  
                     </div>
                   </div>
                 </div>
@@ -95,8 +144,11 @@ export const Contact = (props) => {
                   <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
+                {submitError && (
+        <div className="alert alert-danger">{submitError}</div>
+      )}
+                <button type="submit" className="btn btn-custom btn-lg" disabled = {submitting} >
+                  {submitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>

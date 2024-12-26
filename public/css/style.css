@@ -369,6 +369,7 @@ a:focus,
 .intro {
   display: table;
   width: 100%;
+  height: 90vh;
   padding: 0;
   background: url(../img/intro-bg.jpg) center no-repeat;
   align-content: center;
@@ -380,6 +381,7 @@ a:focus,
 }
 .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
+  height: 100%;
 }
 .intro h1 {
   font-family: "Raleway", sans-serif;
@@ -441,8 +443,9 @@ header .intro-text {
     margin-bottom: 30px;
   }
   header .intro-text {
-    padding-top: 150px;
-    padding-bottom: 80px;
+    padding-top: 300px;
+    padding-bottom: 30px;
+  
   }
 }
 
