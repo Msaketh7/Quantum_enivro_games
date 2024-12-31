@@ -3,8 +3,20 @@ import React, { useState } from "react";
 export const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  // Close the navbar when a link is clicked (on mobile)
-  const handleNavLinkClick = () => {
+  // Function to handle navigation and scroll to the start of the target section
+  const handleNavLinkClick = (event, targetId) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      // Scroll to the start of the target section
+      targetElement.scrollIntoView({
+        behavior: "smooth", // Smooth scrolling
+        block: "start", // Align the section to the top of the viewport
+      });
+    }
+
     if (window.innerWidth <= 768) {
       setIsNavOpen(false); // Close the menu on smaller screens
     }
@@ -37,32 +49,56 @@ export const Navigation = () => {
         >
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <a href="#about" className="page-scroll" onClick={handleNavLinkClick}>
+              <a
+                href="#about"
+                className="page-scroll"
+                onClick={(e) => handleNavLinkClick(e, "#about")}
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#services" className="page-scroll" onClick={handleNavLinkClick}>
+              <a
+                href="#services"
+                className="page-scroll"
+                onClick={(e) => handleNavLinkClick(e, "#services")}
+              >
                 Services
               </a>
             </li>
             <li>
-              <a href="#team" className="page-scroll" onClick={handleNavLinkClick}>
+              <a
+                href="#team"
+                className="page-scroll"
+                onClick={(e) => handleNavLinkClick(e, "#team")}
+              >
                 Team
               </a>
             </li>
             <li>
-              <a href="#play" className="page-scroll" onClick={handleNavLinkClick}>
+              <a
+                href="#play"
+                className="page-scroll"
+                onClick={(e) => handleNavLinkClick(e, "#play")}
+              >
                 Play
               </a>
             </li>
             <li>
-              <a href="#careers" className="page-scroll" onClick={handleNavLinkClick}>
+              <a
+                href="#careers"
+                className="page-scroll"
+                onClick={(e) => handleNavLinkClick(e, "#careers")}
+              >
                 Careers
               </a>
             </li>
             <li>
-              <a href="#contact" className="page-scroll" onClick={handleNavLinkClick}>
+              <a
+                href="#contact"
+                className="page-scroll"
+                onClick={(e) => handleNavLinkClick(e, "#contact")}
+              >
                 Contact
               </a>
             </li>
