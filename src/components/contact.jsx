@@ -1,7 +1,6 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import React from "react";
-// import AWS from 'aws-sdk';
-import { saveContactMessage } from './dynamoDBService.jsx';
 
 const initialState = {
   name: "",
@@ -10,80 +9,39 @@ const initialState = {
 };
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState(null);
-
-// Configure AWS SDK
-// AWS.config.update({
-//   region: 'us-east-1', // e.g., 'us-east-1'
-//   accessKeyId: 'admin@quantumenvirogames.com',
-//   secretAccessKey: 'Qu@ntumenviro9821',
-// });
+  const [statusMessage, setStatusMessage] = useState(""); // State for success or error message
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
   const clearState = () => setState({ ...initialState });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitting(true);
-    setSubmitError(null);
-    
-    try {
-      // Save to DynamoDB
-      await saveContactMessage({ name, email, message });
-      clearState();
-      alert('Message sent successfully!');
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitError('Failed to send message. Please try again later.');
-    } finally {
-      setSubmitting(false);
-    }
+    setStatusMessage(""); // Clear any previous message
+
+    emailjs
+      .sendForm(
+        "service_c4oah4t", // Your EmailJS Service ID
+        "template_2vv2fmj", // Your EmailJS Template ID
+        e.target,
+        "hDUw2IDpLRYZMGsXk" // Your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Email successfully sent:", result.text);
+          clearState();
+          setStatusMessage("Message sent successfully!"); // Set success message
+        },
+        (error) => {
+          console.error("Failed to send email:", error.text);
+          setStatusMessage("Failed to send the message. Please try again later."); // Set error message
+        }
+      );
   };
-    // console.log(name, email, message);
-  
-  //   // Create a new DynamoDB document
-  //   const docClient = new AWS.DynamoDB.DocumentClient();
-  //   const params = {
-  //     TableName: 'ContactFormSubmissions',
-  //     Item: {
-  //       id: new Date().toISOString(), // Unique ID for the submission
-  //       name: name,
-  //       email: email,
-  //       message: message,
-  //     },
-  //   };
-  
-  //   try {
-  //     await docClient.put(params).promise();
-  //     console.log("Data saved to DynamoDB");
-  //     clearState();
-  //   } catch (error) {
-  //     console.error("Error saving data to DynamoDB:", error);
-  //   }
-  // };
-  
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(name, email, message);
-    
-  //   {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
-  //   emailjs
-  //     .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         clearState();
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // };
+
   return (
     <div>
       <div id="contact">
@@ -92,15 +50,21 @@ export const Contact = (props) => {
             <div className="row">
               <div className="section-title">
                 <h2>Get In Touch</h2>
-                <p>We’d love to hear from you! Whether you have a project idea, are interested in collaborating, or just want to learn more about Quantum Enviro Games, feel free to reach out.
+                <p>
+                  We’d love to hear from you! Whether you have a project idea,
+                  are interested in collaborating, or just want to learn more
+                  about Quantum Enviro Games, feel free to reach out.
                 </p>
-                <p>We are open to partnerships, freelance opportunities, and conversations with anyone in the gaming community!</p>
+                <p>
+                  We are open to partnerships, freelance opportunities, and
+                  conversations with anyone in the gaming community!
+                </p>
                 <p>
                   Please fill out the form below to send us an email and we will
                   get back to you as soon as possible.
                 </p>
               </div>
-              <form name="sentMessage" validate = "true" onSubmit={handleSubmit}>
+              <form name="sentMessage" validate="true" onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
@@ -112,6 +76,7 @@ export const Contact = (props) => {
                         placeholder="Name"
                         required
                         onChange={handleChange}
+                        value={name}
                       />
                       <p className="help-block text-danger"></p>
                     </div>
@@ -126,8 +91,9 @@ export const Contact = (props) => {
                         placeholder="Email"
                         required
                         onChange={handleChange}
+                        value={email}
                       />
-                      <p className="help-block text-danger"></p>  
+                      <p className="help-block text-danger"></p>
                     </div>
                   </div>
                 </div>
@@ -140,17 +106,37 @@ export const Contact = (props) => {
                     placeholder="Message"
                     required
                     onChange={handleChange}
+                    value={message}
                   ></textarea>
                   <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
-                {submitError && (
-        <div className="alert alert-danger">{submitError}</div>
-      )}
-                <button type="submit" className="btn btn-custom btn-lg" disabled = {submitting} >
-                  {submitting ? 'Sending...' : 'Send Message'}
+                <button type="submit" className="btn btn-custom btn-lg">
+                  Send Message
                 </button>
               </form>
+              {statusMessage && (
+                <div
+                  style={{
+                    marginTop: "20px",
+                    padding: "10px",
+                    borderRadius: "5px",
+                    backgroundColor: statusMessage.includes("successfully")
+                      ? "#d4edda"
+                      : "#f8d7da",
+                    color: statusMessage.includes("successfully")
+                      ? "#155724"
+                      : "#721c24",
+                    border: `1px solid ${
+                      statusMessage.includes("successfully")
+                        ? "#c3e6cb"
+                        : "#f5c6cb"
+                    }`,
+                  }}
+                >
+                  {statusMessage}
+                </div>
+              )}
             </div>
           </div>
           <div className="col-md-3 col-md-offset-1 contact-info">
@@ -176,7 +162,9 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
                 </span>{" "}
-                <a href="mailto: admin@quantumenvirogames.com">{props.data ? props.data.email : "loading"}</a>
+                <a href="mailto: admin@quantumenvirogames.com">
+                  {props.data ? props.data.email : "loading"}
+                </a>
               </p>
             </div>
             <div className="contact-item">
@@ -184,7 +172,9 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-envelope-o"></i> Help
                 </span>{" "}
-                <a href="mailto: qhelp@quantumenvirogames.com">{props.data ? props.data.help : "loading"}</a>
+                <a href="mailto: qhelp@quantumenvirogames.com">
+                  {props.data ? props.data.help : "loading"}
+                </a>
               </p>
             </div>
           </div>
@@ -193,7 +183,7 @@ export const Contact = (props) => {
               <div className="social">
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.linkedin: "/"}>
+                    <a href={props.data ? props.data.linkedin : "/"}>
                       <i className="fa fa-linkedin"></i>
                     </a>
                   </li>
@@ -215,9 +205,7 @@ export const Contact = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>
-            &copy; 2024 Quantum Enviro Games
-          </p>
+          <p>&copy; 2024 Quantum Enviro Games</p>
         </div>
       </div>
     </div>

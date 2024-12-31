@@ -23,7 +23,6 @@ export const Play = () => {
     // Clear the interval on component unmount
     return () => stopAutoSlide();
   }, [images.length]);
-
   // Start auto-slide
   const startAutoSlide = () => {
     autoSlideInterval.current = setInterval(() => {

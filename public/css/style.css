@@ -219,7 +219,7 @@ hr {
   transition: width 0.2s !important;
 }
 .navbar-toggle {
-  border-radius: 0;
+  border: none;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -365,11 +365,96 @@ a:focus,
   }
 } 
 
+/* Responsive for Mobile */
+@media screen and (max-width: 400px) {
+  #menu {
+    padding: 5px;
+  }
+  #menu.navbar-default .navbar-nav > li > a {
+    font-size: 12px;
+    margin: 5px 5px 0;
+  }
+  #menu a.navbar-brand {
+    font-size: 18px;
+  }
+  .section-title h2 {
+    font-size: 24px;
+  }
+  .section-title p {
+    font-size: 14px;
+  }
+  .btn-custom {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+  .navbar-toggle {
+    margin: 5px;
+  }
+   .navbar-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+
+  }
+
+  .navbar-brand.page-scroll {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+  }
+  .navbar-brand.page-scroll .navbar-text {
+    font-size: 13px;
+  } 
+} 
+
+/* Responsive for Mobile */
+@media screen and (max-width: 360px) {
+  #menu {
+    padding: 5px;
+  }
+  #menu.navbar-default .navbar-nav > li > a {
+    font-size: 12px;
+    margin: 5px 5px 0;
+  }
+  #menu a.navbar-brand {
+    font-size: 18px;
+  }
+  .section-title h2 {
+    font-size: 24px;
+  }
+  .section-title p {
+    font-size: 14px;
+  }
+  .btn-custom {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+  .navbar-toggle {
+    margin: 5px;
+  }
+   .navbar-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+
+  }
+
+  .navbar-brand.page-scroll {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+  }
+  .navbar-brand.page-scroll .navbar-text {
+    font-size: 12px;
+  } 
+} 
+
+
 /* Header Section */
 .intro {
   display: table;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   padding: 0;
   background: url(../img/intro-bg.jpg) center no-repeat;
   align-content: center;
@@ -415,6 +500,10 @@ header .intro-text {
   .intro h1 {
     font-size: 50px;
   }
+
+  .intro {
+    padding: 130px 0 0 0;
+  }
   .intro h1 span {
     font-size: 50px;
   }
@@ -428,6 +517,59 @@ header .intro-text {
     padding-bottom: 100px;
   }
 }
+
+
+/* Responsive for Tablets */
+@media screen and (max-width: 920px) {
+  .intro h1 {
+    font-size: 50px;
+  }
+
+  .intro {
+    padding: 130px 0 0 0;
+  }
+  .intro h1 span {
+    font-size: 50px;
+  }
+  .intro p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+  header .intro-text {
+    padding-top: 250px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Responsive for Tablets */
+@media screen and (max-width: 1050px) {
+  .intro h1 {
+    font-size: 50px;
+  }
+
+  .intro {
+    padding: 130px 0 0 0;
+  }
+  .intro h1 span {
+    font-size: 50px;
+  }
+  .intro p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+  header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+    .intro {
+      width: 100vw;
+      height: 100%;
+      padding: 80px 0;
+    }
+  }
+
 
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
@@ -446,6 +588,35 @@ header .intro-text {
     padding-top: 300px;
     padding-bottom: 30px;
   
+  }
+  .intro {
+    width: 100vw;
+    height: 100%;
+    padding: 50px 0;
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 400px) {
+  .intro h1 {
+    font-size: 36px;
+  }
+  .intro h1 span {
+    font-size: 36px;
+  }
+  .intro p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  header .intro-text {
+    padding-top: 300px;
+    padding-bottom: 30px;
+  
+  }
+  .intro {
+    width: 100vw;
+    height: 100%;
   }
 }
 
@@ -577,6 +748,44 @@ header .intro-text {
     align-items: center;
     gap: 20px;
   }
+  #about{
+    padding: 150px 0;
+  }
+
+  .about-text {
+    width: 90%; /* Full width for better readability */
+    padding: 20px;
+  }
+
+  #about h2.about-title, #about h3.about-title {
+    font-size: 24px; /* Smaller font size for titles */
+  }
+
+  #about p.about-paragraph {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  #about ul li.about-list-item {
+    font-size: 14px; /* Adjust font size for list items */
+    padding-left: 15px; /* Adjust padding for smaller screens */
+  }
+
+  #about ul li.about-list-item::before {
+    font-size: 16px; /* Adjust bullet size */
+  }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 920px) {
+  #about .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 20px;
+  }
+  #about{
+    padding: 200px 0;
+  }
 
   .about-text {
     width: 90%; /* Full width for better readability */
@@ -628,6 +837,8 @@ header .intro-text {
     gap: 20px;
   }
 }
+
+
 
 /* Services Section */
 #services .row {
@@ -771,6 +982,32 @@ header .intro-text {
   }
 }
 
+/* Responsive for Tablets */
+@media screen and (max-width: 920px) {
+  #services {
+    padding: 160px 10px; /* Reduce padding for smaller screens */
+  }
+
+  #services h2 {
+    font-size: 24px; /* Adjust title size */
+  }
+
+  #services i.fa {
+    font-size: 36px; /* Smaller icon size */
+    width: 100px;
+    height: 100px;
+    padding: 30px 0;
+  }
+
+  #services .logo-img {
+    width: 120px; /* Resize logo */
+  }
+
+  #services .row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+}
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
   #services .queries p {
@@ -795,7 +1032,7 @@ header .intro-text {
 /* Responsive for Tablets */
 @media screen and (max-width: 768px) {
   #services {
-    padding: 60px 10px; /* Reduce padding for smaller screens */
+    padding: 160px 10px; /* Reduce padding for smaller screens */
   }
 
   #services h2 {
@@ -822,7 +1059,7 @@ header .intro-text {
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
   #services {
-    padding: 40px 10px; /* Further reduce padding */
+    padding: 80px 10px; /* Further reduce padding */
   }
 
   #services h2 {
@@ -943,7 +1180,7 @@ header .intro-text {
 /* Responsive for Tablets */
 @media screen and (max-width: 768px) {
   #play {
-    padding: 80px 0; /* Adjust padding */
+    padding: 150px 0; /* Adjust padding */
   }
 
   #play p {
@@ -964,10 +1201,98 @@ header .intro-text {
   }
 }
 
+
+/* Responsive for Tablets */
+@media screen and (max-width: 920px) {
+  #play {
+    padding: 150px 0; /* Adjust padding */
+  }
+
+  #play p {
+    font-size: 20px; /* Reduce font size for tablets */
+  }
+
+  .download-button {
+    font-size: 28px; /* Adjust button font size */
+    padding: 12px 24px; /* Adjust button padding */
+  }
+
+  .slideshow {
+    max-width: 90%; /* Increase max-width for tablets */
+  }
+
+  .caption {
+    font-size: 12px; /* Reduce caption font size */
+  }
+
+  .slide-image {
+    width: 100%; /* Ensure image fits in container */
+   
+    size-adjust: 30%;
+    border-radius: 10px;
+  }
+
+  .slideshow {
+    position: relative;
+    max-width: 60%; /* Adjust max-width for tablets */
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+  
+}
+
+
+/* Responsive for Tablets */
+@media screen and (max-width: 1050px) {
+  #play {
+    padding: 135px 0; /* Adjust padding */
+  }
+
+  #play p {
+    font-size: 20px; /* Reduce font size for tablets */
+  }
+
+  .download-button {
+    font-size: 28px; /* Adjust button font size */
+    padding: 12px 24px; /* Adjust button padding */
+  }
+
+  .slideshow {
+    max-width: 90%; /* Increase max-width for tablets */
+  }
+
+  .caption {
+    font-size: 12px; /* Reduce caption font size */
+  }
+
+  .slide-image {
+    width: 100%; /* Ensure image fits in container */
+   
+    size-adjust: 30%;
+    border-radius: 10px;
+  }
+
+  .slideshow {
+    position: relative;
+    max-width: 50%; /* Adjust max-width for tablets */
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+  
+}
+
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
   #play {
-    padding: 60px 0; /* Further adjust padding */
+    padding: 90px 0; /* Further adjust padding */
   }
 
   #play p {
@@ -1103,7 +1428,51 @@ header .intro-text {
 /* Responsive for Tablets */
 @media screen and (max-width: 768px) {
   #careers {
-    padding: 150px 0; /* Reduce padding on tablets */
+    padding: 210px 0; /* Reduce padding on tablets */
+  }
+
+  #careers h2 {
+    font-size: 32px; /* Reduce font size for tablets */
+  }
+
+  #careers p {
+    font-size: 16px; /* Adjust font size for tablets */
+    max-width: 80%; /* Limit paragraph width */
+    margin: 0 auto;
+  }
+
+  #careers2 {
+    padding: 80px 0; /* Adjust padding for tablets */
+  }
+
+  .section-title h2 {
+    font-size: 30px; /* Adjust section title font size */
+  }
+
+  .careers2-item {
+    margin-bottom: 30px; /* Reduce margin */
+  }
+
+  .careers2-desc h3 {
+    font-size: 20px; /* Adjust heading font size */
+  }
+
+  .careers2-desc p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .queries p {
+    font-size: 24px; /* Reduce font size for queries */
+  }
+  .careers2-content {
+    min-height: 250px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Responsive for Tablets */
+@media screen and (max-width: 1050px) {
+  #careers {
+    padding: 210px 0; /* Reduce padding on tablets */
   }
 
   #careers h2 {
@@ -1147,7 +1516,7 @@ header .intro-text {
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
   #careers {
-    padding: 100px 0; /* Further reduce padding */
+    padding: 170px 0; /* Further reduce padding */
   }
 
   #careers h2 {
@@ -1197,97 +1566,148 @@ header .intro-text {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  text-align: center; /* Centering text */
+  text-align: center;
+}
+
+.container .section-title p {
+  font-size: 17px; /* Adjust the font size */
+  line-height: 1.6; 
+  color: #fff;/* Adjust line height for better readability *//* Set a lighter color for the paragraph text */
+  margin: 0 auto; /* Center the paragraph */
+  max-width: 800px; /* Set a max width to keep the paragraph from stretching too wide */
+  padding: 0 15px; /* Add some padding for better spacing */
 }
 
 #team h2 {
   font-size: 40px;
   margin-bottom: 30px;
-  text-decoration: none;
   text-transform: uppercase;
   color: #8d6429;
   letter-spacing: 2px;
 }
 
-#team .team {
+#team .team-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Adjust gap between team members */
+  flex-wrap: wrap;
+}
+
+#team .team-member {
   text-align: center;
-  margin-bottom: 30px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 
 #team .team-img {
-  width: 240px;
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #team .thumbnail {
   background: transparent;
   border: 0;
-  display: inline-block; /* Centers thumbnail content */
-}
-
-#team .thumbnail .caption {
-  padding: 0px 0 0;
-  color: #888;
 }
 
 #team p {
   text-align: center;
 }
+#team h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #523a28;
+}
 
 /* Hover Effects */
-#team .team:hover .team-img {
-  transform: scale(1.1); /* Slightly enlarge the image */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+#team .team-member:hover .team-img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive for Tablets */
 @media screen and (max-width: 768px) {
-  #team {
-    padding: 80px 0; /* Reduce padding on tablets */
-  }
-
   #team h2 {
-    font-size: 30px; /* Adjust font size for tablets */
+    font-size: 30px;
   }
 
   #team .team-img {
-    width: 200px; /* Reduce image size */
+    width: 200px;
+    height: 200px;
   }
 
-  .team {
-    margin-bottom: 20px; /* Adjust margin for better spacing */
+  #team .team-container {
+    gap: 15px;
+  }
+
+  #team{
+    padding: 150px 0;
+  }
+}
+
+/* Responsive for Tablets */
+@media screen and (max-width: 920px) {
+
+  #team{
+    padding: 180px 0;
+  }
+
+  #team h2{
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+  #team h2 {
+    font-size: 30px;
   }
 
   #team .team-img {
-    width: 200px; /* Adjust the image size */
+    width: 200px;
+    height: 200px;
+  }
+
+  #team .team-container {
+    gap: 15px;
+  }
+  }
+
+  /* Responsive for Tablets */
+@media screen and (max-width: 1050px) {
+  #team h2 {
+    font-size: 30px;
+  }
+
+  #team .team-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #team .team-container {
+    gap: 15px;
+  }
+
+  #team{
+    padding: 150px 0;
   }
 }
 
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
-  #team {
-    padding: 60px 0; /* Reduce padding further */
-  }
-
   #team h2 {
-    font-size: 24px; /* Further reduce font size */
+    font-size: 24px;
   }
 
   #team .team-img {
-    width: 150px; /* Further reduce image size */
+    width: 150px;
+    height: 150px;
   }
 
-  .team {
-    margin-bottom: 15px; /* Adjust margin */
-  }
-
-  #team .thumbnail {
-    display: block; /* Stack team images vertically */
-    margin: 0 auto; /* Center images on mobile */
+  #team .team-container {
+    gap: 10px;
   }
 }
+
 
 /* Contact Section */
 #contact {
@@ -1458,7 +1878,7 @@ label {
 /* Responsive for Tablets */
 @media screen and (max-width: 768px) {
   #contact {
-    padding: 80px 0; /* Reduce padding */
+    padding: 150px 0; /* Reduce padding */
   }
 
   #contact h2 {
@@ -1494,10 +1914,18 @@ label {
   }
 }
 
+
+/* Responsive for Tablets */
+@media screen and (max-width: 920px) {
+  #contact {
+    padding: 150px 0; /* Reduce padding */
+  }
+  }
+
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
   #contact {
-    padding: 60px 0; /* Reduce padding further */
+    padding: 100px 0; /* Reduce padding further */
   }
 
   #contact h2 {
