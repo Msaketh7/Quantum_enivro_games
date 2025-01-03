@@ -649,7 +649,8 @@ header .intro-text {
   }
   .intro {
     width: 100vw;
-    height: 100%;
+    
+    min-height: 100vh;
   }
 
 }
@@ -1347,6 +1348,7 @@ header .intro-text {
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
   #play {
+    padding: 100px 0; /* Adjust padding */
     min-height: 100vh; /* Ensures section takes up at least the viewport height */
   }
 
@@ -1540,7 +1542,65 @@ header .intro-text {
 /* Responsive for Mobile */
 @media screen and (max-width: 480px) {
   #careers {
+    padding: 20px; /* Further reduce padding */
+     min-height: 100vh;
+  }
+
+  #careers .container {
+    padding: 100px 0 0 0 ;
+    margin-top: 150px;
+  }
+
+  #careers h2 {
+    font-size: 28px; /* Further reduce font size */
+  }
+
+  #careers p {
+    font-size: 14px; /* Adjust font size for mobile */
+    max-width: 90%; /* Limit paragraph width */
+    margin: 0 auto;
+  }
+
+  #careers2 {
+    padding: 60px 0; /* Further reduce padding */
+  }
+
+  .section-title h2 {
+    font-size: 26px; /* Adjust font size */
+  }
+
+  .careers2-item {
+    margin-bottom: 20px; /* Reduce bottom margin */
+  }
+
+  .careers2-desc h3 {
+    font-size: 18px; /* Adjust heading font size */
+  }
+
+  .careers2-desc p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .queries p {
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+  .careers2-content {
+    min-height: 200px; /* Further adjust height for mobile */
+    padding: 15px; /* Reduce padding for compact view */
+  }
+}
+
+
+/* Responsive for Mobile */
+@media screen and (max-width: 380px) {
+  #careers {
+    padding: 50px 0; /* Further reduce padding */
     min-height: 100vh; /* Further reduce padding */
+  }
+
+  #careers .container {
+    padding: 50px 0 0 0 ;
+    margin-top: 50px;
   }
 
   #careers h2 {
@@ -1749,6 +1809,7 @@ header .intro-text {
 
   #team {
     padding: 80px 0;
+    min-height: 100vh;
   }
 }
 
